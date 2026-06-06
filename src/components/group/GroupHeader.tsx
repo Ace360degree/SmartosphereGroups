@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import RequestDemoModal from "../RequestDemoModal";
 
 const navLinks = [
-  { label: "Smartosphere Capital LLC", href: "/capital" },
-  { label: "Smartosphere Technicalities INC", href: "/technicalities" },
-  { label: "Smartosphere Solutions LLP", href: "/solutions-llp" },
+  { label: "Capital", href: "/capital" },
+  { label: "Technology", href: "/technicalities" },
+  { label: "Solutions", href: "/solutions-llp" },
 ];
 
 const GroupHeader = () => {

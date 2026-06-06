@@ -422,11 +422,10 @@ const SmartosphereCapital = () => {
               ].map((node, i) => (
                 <div key={node.name} className="relative">
                   <div
-                    className={`relative rounded-2xl p-8 border backdrop-blur-sm overflow-hidden transition-all ${
-                      node.active
-                        ? "border-accent/60 bg-surface-elevated"
-                        : "border-border bg-surface-elevated/50"
-                    }`}
+                    className={`relative rounded-2xl p-8 border backdrop-blur-sm overflow-hidden transition-all ${node.active
+                      ? "border-accent/60 bg-surface-elevated"
+                      : "border-border bg-surface-elevated/50"
+                      }`}
                     style={
                       node.active
                         ? { boxShadow: "0 0 40px hsl(32 93% 48% / 0.2), inset 0 0 30px hsl(350 72% 40% / 0.1)" }
@@ -458,10 +457,12 @@ const SmartosphereCapital = () => {
 
             <div className="mt-10 text-center">
               <Link
-                to="/"
+                to="https://staging.smartospheresolutions.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-heading hover:text-accent transition-colors"
               >
-                View the full ecosystem
+                Explore Smartosphere Solutions
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -523,27 +524,37 @@ const SmartosphereCapital = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-6">Next Step</p>
             <h2 className="font-heading text-4xl lg:text-6xl font-bold text-heading leading-tight">
-              Looking Beyond
+              Capital is Just the
               <br />
               <span
                 className="bg-clip-text text-transparent"
                 style={{ backgroundImage: "linear-gradient(120deg, hsl(32 93% 55%), hsl(350 72% 55%))" }}
               >
-                Capital
+                Beginning
               </span>
             </h2>
             <p className="mt-8 text-lg lg:text-xl text-body leading-relaxed">
-              Innovation benefits from aligned thinking, execution capability, and long-term perspective.
+              See how Smartosphere Solutions LLP turns strategic participation into real-world engineering
+              execution — building the products and systems that innovation demands.
             </p>
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="mt-12 group inline-flex items-center gap-2 px-8 py-4 rounded-lg text-primary-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-[0_0_35px_hsl(350_72%_50%/0.5)]"
-              style={{ background: "linear-gradient(135deg, hsl(32 93% 48%), hsl(350 72% 50%))" }}
-            >
-              Discuss an Opportunity
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+              <Link
+                to="/solutions-llp"
+                className="group inline-flex items-center gap-2 px-8 py-4 rounded-lg text-primary-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-[0_0_35px_hsl(350_72%_50%/0.5)]"
+                style={{ background: "linear-gradient(135deg, hsl(32 93% 48%), hsl(350 72% 50%))" }}
+              >
+                Explore Smartosphere Solutions
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-border text-heading text-sm font-semibold hover:border-accent/60 hover:text-accent transition-colors"
+              >
+                Discuss an Opportunity
+              </button>
+            </div>
           </motion.div>
         </div>
       </section>

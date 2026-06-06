@@ -106,13 +106,19 @@ const GroupHome = () => {
               initiatives across different stages of growth and development.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#entities"
+              <Link
+                to="/capital"
                 className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-primary-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-[0_0_30px_hsl(350_72%_50%/0.45)]"
                 style={{ background: "linear-gradient(135deg, hsl(32 93% 48%), hsl(350 72% 50%))" }}
               >
-                Explore Our Entities
+                Explore Smartosphere Capital
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <a
+                href="#entities"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border text-heading text-sm font-semibold hover:border-accent/60 hover:text-accent transition-colors"
+              >
+                View Our Entities
               </a>
             </div>
           </motion.div>
@@ -130,7 +136,7 @@ const GroupHome = () => {
             />
             <svg viewBox="0 0 400 400" className="relative w-full h-full">
               <defs>
-                <linearGradient id="gedge" x1="0" x2="1">
+                <linearGradient id="gedge" x1="80" y1="300" x2="320" y2="300" gradientUnits="userSpaceOnUse">
                   <stop offset="0%" stopColor="hsl(32 93% 55%)" stopOpacity="0.8" />
                   <stop offset="100%" stopColor="hsl(350 72% 55%)" stopOpacity="0.8" />
                 </linearGradient>
@@ -140,23 +146,23 @@ const GroupHome = () => {
                 </radialGradient>
               </defs>
 
-              <motion.line x1="200" y1="80" x2="80" y2="300" stroke="url(#gedge)" strokeWidth="1.5"
+              <motion.path d="M200 80 L80 300" stroke="url(#gedge)" strokeWidth="1.5" fill="none"
                 initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.4, delay: 0.4 }} />
-              <motion.line x1="200" y1="80" x2="320" y2="300" stroke="url(#gedge)" strokeWidth="1.5"
+              <motion.path d="M200 80 L320 300" stroke="url(#gedge)" strokeWidth="1.5" fill="none"
                 initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.4, delay: 0.6 }} />
-              <motion.line x1="80" y1="300" x2="320" y2="300" stroke="url(#gedge)" strokeWidth="1.5"
+              <motion.path d="M80 300 L320 300" stroke="url(#gedge)" strokeWidth="1.5" fill="none"
                 initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.4, delay: 0.8 }} />
 
               <circle cx="200" cy="200" r="60" fill="url(#gnodeGlow)" />
               <motion.circle cx="200" cy="200" r="22" fill="hsl(220 15% 16%)" stroke="hsl(32 93% 55%)" strokeWidth="1.5"
                 animate={{ scale: [1, 1.08, 1] }} transition={{ duration: 3, repeat: Infinity }} style={{ transformOrigin: "200px 200px" }} />
               <text x="200" y="240" textAnchor="middle" fill="hsl(var(--heading))" className="font-heading" fontSize="13" fontWeight="600">
-                Customers
+                Clients
               </text>
 
               {[
                 { cx: 200, cy: 80, label: "Capital" },
-                { cx: 80, cy: 300, label: "Strategy" },
+                { cx: 80, cy: 300, label: "Technology" },
                 { cx: 320, cy: 300, label: "Engineering" },
               ].map((n, i) => (
                 <g key={n.label}>
@@ -351,26 +357,35 @@ const GroupHome = () => {
         </div>
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-6">Start Here</p>
             <h2 className="font-heading text-4xl lg:text-6xl font-bold text-heading leading-tight">
-              Supporting Innovation Through
+              Innovation Begins with
               <br />
               <span className="bg-clip-text text-transparent"
                 style={{ backgroundImage: "linear-gradient(120deg, hsl(32 93% 55%), hsl(350 72% 55%))" }}>
-                Specialised Expertise
+                Aligned Capital
               </span>
             </h2>
             <p className="mt-8 text-lg lg:text-xl text-body leading-relaxed">
-              Smartosphere Group brings together distinct capabilities across capital participation, technical
-              consulting, and engineering execution to help ideas move forward with confidence.
+              Discover how Smartosphere Capital supports technology ventures with strategic participation,
+              ecosystem access, and long-term alignment.
             </p>
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="mt-12 group inline-flex items-center gap-2 px-8 py-4 rounded-lg text-primary-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-[0_0_35px_hsl(350_72%_50%/0.5)]"
-              style={{ background: "linear-gradient(135deg, hsl(32 93% 48%), hsl(350 72% 50%))" }}
-            >
-              Start a Conversation
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+              <Link
+                to="/capital"
+                className="group inline-flex items-center gap-2 px-8 py-4 rounded-lg text-primary-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-[0_0_35px_hsl(350_72%_50%/0.5)]"
+                style={{ background: "linear-gradient(135deg, hsl(32 93% 48%), hsl(350 72% 50%))" }}
+              >
+                Explore Smartosphere Capital
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-border text-heading text-sm font-semibold hover:border-accent/60 hover:text-accent transition-colors"
+              >
+                Start a Conversation
+              </button>
+            </div>
           </motion.div>
         </div>
       </section>
