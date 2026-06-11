@@ -51,10 +51,10 @@ const GroupFooter = () => {
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 mt-0.5 text-primary shrink-0" />
                 <a
-                  href="mailto:info@smartospheregroup.com"
+                  href="mailto:boa@smartospheregroup.com"
                   className="text-sm text-body hover:text-primary transition-colors break-all"
                 >
-                  info@smartospheregroup.com
+                  boa@smartospheregroup.com
                 </a>
               </li>
               {/* <li className="flex items-start gap-3">

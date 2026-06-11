@@ -5,6 +5,7 @@ import { ArrowRight, Sparkles, Cpu, Layers, Wrench, ShieldCheck, Activity, Build
 import GroupHeader from "@/components/group/GroupHeader";
 import GroupFooter from "@/components/group/GroupFooter";
 import RequestDemoModal from "@/components/RequestDemoModal";
+import ProductPortfolio from "@/components/ProductPortfolio";
 
 const capabilities = [
   { icon: Cpu, title: "Embedded & Hardware", desc: "Custom electronics, sensors, and embedded systems engineered for reliable field operation." },
@@ -202,6 +203,9 @@ const SmartosphereSolutionsLLP = () => {
           </div>
         </div>
       </section>
+
+      {/* Product Portfolio */}
+      <ProductPortfolio />
 
       {/* Closing */}
       <section className="py-28 lg:py-40 border-t border-border/50 relative overflow-hidden">
