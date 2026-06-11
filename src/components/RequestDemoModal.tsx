@@ -25,9 +25,8 @@ const RequestDemoModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
     setErrorMessage("");
 
     try {
-      const url = window.location.hostname === "localhost"
-        ? "http://localhost/Smartosphere/admin/demo_submit.php"
-        : "https://smartospheresolutions.com/admin/demo_submit.php";
+      // Always point to the remote server for submissions
+      const url = "https://smartospheresolutions.com/admin/demo_submit.php";
 
       const response = await fetch(url, {
         method: "POST",
