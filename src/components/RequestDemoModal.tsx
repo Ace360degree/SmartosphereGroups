@@ -25,8 +25,8 @@ const RequestDemoModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
     setErrorMessage("");
 
     try {
-      // Always point to the remote cPanel server for submissions
-      const url = "https://api.smartospheresolutions.com/admin/demo_submit.php";
+      // Submit directly to Vercel's internal serverless function
+      const url = "/api/demo_submit";
 
       const response = await fetch(url, {
         method: "POST",
