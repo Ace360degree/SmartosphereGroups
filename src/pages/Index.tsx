@@ -18,10 +18,10 @@ const entities = [
   },
   {
     icon: Compass,
-    name: "Smartosphere Technicalities INC",
+    name: "Smartosphere Technologies INC",
     tag: "Technical Direction",
     summary: "Strategic technology direction for complex innovation.",
-    cta: "Explore Smartosphere Technicalities",
+    cta: "Explore Smartosphere Technologies",
     href: "/technicalities",
   },
   {
@@ -100,25 +100,27 @@ const GroupHome = () => {
               Supporting Innovation Through Capital, Strategy &amp; Engineering.
             </p>
             <p className="mt-8 text-base lg:text-lg text-body leading-relaxed max-w-xl">
-              SmartoSphere Group brings together specialised entities focused on innovation enablement, technology
+              Smartosphere Group brings together specialised entities focused on innovation enablement, technology
               consulting, and engineering execution. Through a combination of strategic thinking, technical expertise,
               and practical implementation, the group supports organisations, innovators, and technology-driven
               initiatives across different stages of growth and development.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link
+              {/* <Link
                 to="/capital"
                 className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-primary-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-[0_0_30px_hsl(350_72%_50%/0.45)]"
                 style={{ background: "linear-gradient(135deg, hsl(32 93% 48%), hsl(350 72% 50%))" }}
               >
                 Explore Smartosphere Capital
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </Link> */}
               <a
                 href="#entities"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border text-heading text-sm font-semibold hover:border-accent/60 hover:text-accent transition-colors"
+                className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-primary-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-[0_0_30px_hsl(350_72%_50%/0.45)]"
+                style={{ background: "linear-gradient(135deg, hsl(32 93% 48%), hsl(350 72% 50%))" }}
               >
                 View Our Entities
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           </motion.div>
@@ -155,9 +157,9 @@ const GroupHome = () => {
 
               <circle cx="200" cy="200" r="60" fill="url(#gnodeGlow)" />
               <motion.circle cx="200" cy="200" r="22" fill="hsl(220 15% 16%)" stroke="hsl(32 93% 55%)" strokeWidth="1.5"
-                animate={{ scale: [1, 1.08, 1] }} transition={{ duration: 3, repeat: Infinity }} style={{ transformOrigin: "200px 200px" }} />
+                initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 1, delay: 0.8 }} style={{ transformOrigin: "200px 200px" }} />
               <text x="200" y="240" textAnchor="middle" fill="hsl(var(--heading))" className="font-heading" fontSize="13" fontWeight="600">
-                Clients
+                Clientele
               </text>
 
               {[
@@ -170,8 +172,9 @@ const GroupHome = () => {
                   <motion.circle
                     cx={n.cx} cy={n.cy} r="14"
                     fill="hsl(220 15% 10%)" stroke="hsl(350 72% 55%)" strokeWidth="1.5"
-                    animate={{ r: [14, 17, 14] }}
-                    transition={{ duration: 2.4, repeat: Infinity, delay: i * 0.5 }}
+                    initial={{ r: 0 }}
+                    animate={{ r: 14 }}
+                    transition={{ duration: 0.8, delay: 1 + i * 0.2 }}
                   />
                   <text x={n.cx} y={n.cy + (n.cy < 200 ? -28 : 35)} textAnchor="middle"
                     fill="hsl(var(--heading))" className="font-heading" fontSize="13" fontWeight="600">
@@ -259,11 +262,11 @@ const GroupHome = () => {
             <h2 className="font-heading text-4xl lg:text-5xl font-bold text-heading leading-tight">
               Organisations Connected Through
               <br />
-              Innovation &amp; Technology
+              Capital, Technology &amp; Engineering
             </h2>
             <div className="mt-6 space-y-4 text-base lg:text-lg text-body leading-relaxed">
               <p>
-                SmartoSphere Group has worked with, collaborated with, supported, or engaged with organisations across
+                Smartosphere Group has worked with, collaborated with, supported, or engaged with organisations across
                 technology, engineering, infrastructure, research, and innovation initiatives.
               </p>
               <p>

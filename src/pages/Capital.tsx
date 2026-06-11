@@ -207,8 +207,9 @@ const SmartosphereCapital = () => {
                     fill="hsl(220 15% 10%)"
                     stroke="hsl(32 93% 55%)"
                     strokeWidth="1.5"
-                    animate={{ r: [6, 8, 6] }}
-                    transition={{ duration: 2.2, repeat: Infinity, delay: i * 0.3 }}
+                    initial={{ r: 0 }}
+                    animate={{ r: 6 }}
+                    transition={{ duration: 0.8, delay: 1 + i * 0.2 }}
                   />
                 </g>
               ))}

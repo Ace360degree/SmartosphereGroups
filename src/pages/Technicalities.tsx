@@ -100,7 +100,7 @@ const SmartosphereTechnicalities = () => {
               Planning technology that scales.
             </p>
             <p className="mt-8 text-base lg:text-lg text-body leading-relaxed max-w-xl">
-              Technology decisions influence scalability, security, and long-term growth. Smartosphere Technicalities
+              Technology decisions influence scalability, security, and long-term growth. Smartosphere Technologies
               supports organisations through strategic consulting and technical guidance.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -181,8 +181,9 @@ const SmartosphereTechnicalities = () => {
                   key={i}
                   cx={n.cx} cy={n.cy} r="4"
                   fill="hsl(32 93% 55%)"
-                  animate={{ opacity: [0.3, 1, 0.3] }}
-                  transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.4 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.8 + i * 0.2 }}
                 />
               ))}
             </svg>
@@ -365,7 +366,7 @@ const SmartosphereTechnicalities = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-12 text-center text-base lg:text-lg text-body max-w-2xl mx-auto"
           >
-            Technicalities exists in the space between the two — translating intent into architecture, and constraints
+            Technologies exists in the space between the two — translating intent into architecture, and constraints
             into decisions leadership can defend.
           </motion.p>
         </div>
@@ -383,7 +384,7 @@ const SmartosphereTechnicalities = () => {
               The bridge between capital and execution.
             </h2>
             <p className="mt-6 text-lg text-body leading-relaxed">
-              Technicalities sits between Smartosphere Capital and Smartosphere Solutions — connecting strategic
+              Technologies sits between Smartosphere Capital and Smartosphere Solutions — connecting strategic
               participation to engineering execution through direction that is grounded in both.
             </p>
           </motion.div>
@@ -395,7 +396,7 @@ const SmartosphereTechnicalities = () => {
           >
             {[
               { name: "Capital", tag: "Strategic Participation", icon: Sparkles, href: "/capital" },
-              { name: "Technicalities", tag: "Strategic Direction", icon: Compass, active: true },
+              { name: "Technologies", tag: "Strategic Direction", icon: Compass, active: true },
               { name: "Solutions", tag: "Engineering Execution", icon: GitBranch, href: "/solutions" },
             ].map((node, i) => {
               const Wrapper: any = node.href ? Link : "div";
@@ -404,11 +405,10 @@ const SmartosphereTechnicalities = () => {
                 <div key={node.name} className="relative">
                   <Wrapper
                     {...wrapperProps}
-                    className={`block relative rounded-2xl p-8 border backdrop-blur-sm overflow-hidden transition-all ${
-                      node.active
+                    className={`block relative rounded-2xl p-8 border backdrop-blur-sm overflow-hidden transition-all ${node.active
                         ? "border-accent/60 bg-surface-elevated"
                         : "border-border bg-surface-elevated/50 hover:border-accent/40"
-                    }`}
+                      }`}
                     style={
                       node.active
                         ? { boxShadow: "0 0 40px hsl(32 93% 48% / 0.2), inset 0 0 30px hsl(350 72% 40% / 0.1)" }
