@@ -458,7 +458,7 @@ const SmartosphereCapital = () => {
 
             <div className="mt-10 text-center">
               <Link
-                to="https://staging.smartospheresolutions.com/"
+                to="https://smartospheresolutions.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-heading hover:text-accent transition-colors"

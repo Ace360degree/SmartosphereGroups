@@ -66,7 +66,7 @@ const SmartosphereSolutionsLLP = () => {
               environments — across tracking, biomedical, industrial, safety, and infrastructure domains.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href="https://staging.smartospheresolutions.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://smartospheresolutions.com" target="_blank" rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-primary-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-[0_0_30px_hsl(350_72%_50%/0.45)]"
                 style={{ background: "linear-gradient(135deg, hsl(32 93% 48%), hsl(350 72% 50%))" }}>
                 Visit Smartosphere Solutions
@@ -226,7 +226,7 @@ const SmartosphereSolutionsLLP = () => {
             <p className="mt-8 text-lg lg:text-xl text-body leading-relaxed">
               Explore the full Smartosphere Solutions LLP product and engineering portfolio.
             </p>
-            <a href="https://staging.smartospheresolutions.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://smartospheresolutions.com" target="_blank" rel="noopener noreferrer"
               className="mt-12 group inline-flex items-center gap-2 px-8 py-4 rounded-lg text-primary-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-[0_0_35px_hsl(350_72%_50%/0.5)]"
               style={{ background: "linear-gradient(135deg, hsl(32 93% 48%), hsl(350 72% 50%))" }}>
               Visit Smartosphere Solutions
