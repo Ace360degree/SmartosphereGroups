@@ -79,7 +79,7 @@ export const CustomCursor = () => {
           <div
             key={index}
             ref={(el) => (dotsRef.current[index] = el)}
-            className="fixed top-0 left-0 rounded-full pointer-events-none z-[9999]"
+            className="hidden md:block fixed top-0 left-0 rounded-full pointer-events-none z-[9999]"
             style={{
               width: isHead ? "14px" : "12px",
               height: isHead ? "14px" : "12px",

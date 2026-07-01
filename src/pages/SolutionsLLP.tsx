@@ -50,30 +50,30 @@ const portfolio = [
   {
     title: "Advanced Telematics & Tracking Systems",
     items: [
-      { icon: MapPin, name: "GeoTracker", desc: "Real-time tracking and telemetry systems delivering deep asset location, operational context, and condition metrics under harsh conditions." },
-      { icon: Activity, name: "MHITS", desc: "Human and medical intelligence tracking platforms engineered for continuous safety monitoring in high-stakes environments." }
+      { icon: MapPin, name: "GeoTracker", desc: "Real-time tracking and telemetry systems delivering deep asset location, operational context, and condition metrics under harsh conditions.", href: "#" },
+      { icon: Activity, name: "MHITS", desc: "Human and medical intelligence tracking platforms engineered for continuous safety monitoring in high-stakes environments.", href: "/case-studies/biomedical-monitoring" }
     ]
   },
   {
     title: "Industrial Automation & Specialized Electronics",
     items: [
-      { icon: Cpu, name: "mFlash", desc: "High-reliability industrial electronics engineered for secure data handling and automation control in demanding processing environments." },
-      { icon: Settings, name: "GoKart Servomotor", desc: "Precision digital control systems designed for extreme responsiveness in high-performance motorsport applications." }
+      { icon: Cpu, name: "mFlash", desc: "High-reliability industrial electronics engineered for secure data handling and automation control in demanding processing environments.", href: "#" },
+      { icon: Settings, name: "GoKart Servomotor", desc: "Precision digital control systems designed for extreme responsiveness in high-performance motorsport applications.", href: "/case-studies/gokart-track" }
     ]
   },
   {
     title: "Connected Signage & Media Infrastructure",
     items: [
-      { icon: Monitor, name: "Billboard Controls", desc: "On-site electronic control modules built to maintain the uptime and reliable power distribution of digital billboard infrastructure." },
-      { icon: Cloud, name: "Billboard Portal", desc: "A centralized, enterprise cloud platform built for real-time monitoring, remote management, and analytics of massive display networks." }
+      { icon: Monitor, name: "Billboard Controls", desc: "On-site electronic control modules built to maintain the uptime and reliable power distribution of digital billboard infrastructure.", href: "/case-studies/billboard-network" },
+      { icon: Cloud, name: "Billboard Portal", desc: "A centralized, enterprise cloud platform built for real-time monitoring, remote management, and analytics of massive display networks.", href: "/case-studies/billboard-network" }
     ]
   },
   {
     title: "Regulated & Safety-Critical Environments",
     items: [
-      { icon: ShieldCheck, name: "BioMed", desc: "Special-purpose biomedical electronics and diagnostic monitoring systems built around absolute data integrity and secure handling." },
-      { icon: Radio, name: "Radiation Electronics", desc: "Ultra-precise radiation measurement and monitoring arrays engineered for heavily regulated, safety-driven environments." },
-      { icon: Lock, name: "Laplok", desc: "Smart electronic locking architectures built for high-security asset protection and audited access control." }
+      { icon: ShieldCheck, name: "BioMed", desc: "Special-purpose biomedical electronics and diagnostic monitoring systems built around absolute data integrity and secure handling.", href: "/case-studies/biomedical-monitoring" },
+      { icon: Radio, name: "Radiation Electronics", desc: "Ultra-precise radiation measurement and monitoring arrays engineered for heavily regulated, safety-driven environments.", href: "/case-studies/radiation-safety" },
+      { icon: Lock, name: "Laplok", desc: "Smart electronic locking architectures built for high-security asset protection and audited access control.", href: "#" }
     ]
   }
 ];
@@ -283,27 +283,30 @@ const SmartosphereSolutionsLLP = () => {
                 <h3 className="font-heading text-2xl font-bold text-heading mb-8">{p.title}</h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                   {p.items.map((item, j) => (
-                    <motion.a
+                    <motion.div
                       key={item.name}
-                      href="#"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: j * 0.08 }}
-                      className="group relative rounded-2xl p-8 border border-transparent bg-[#23272f] hover:border-accent/80 transition-all duration-300 overflow-hidden block hover:shadow-[0_0_30px_hsl(32_93%_48%/0.1)]"
                     >
-                      {/* Soft corner radial glow */}
-                      <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl"
-                        style={{ background: "radial-gradient(circle, hsl(32 93% 40%) 0%, transparent 70%)" }} />
+                      <Link
+                        to={item.href || "#"}
+                        className="group relative rounded-2xl p-8 border border-transparent bg-[#23272f] hover:border-accent/80 transition-all duration-300 overflow-hidden block hover:shadow-[0_0_30px_hsl(32_93%_48%/0.1)]"
+                      >
+                        {/* Soft corner radial glow */}
+                        <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl"
+                          style={{ background: "radial-gradient(circle, hsl(32 93% 40%) 0%, transparent 70%)" }} />
 
-                      <div className="relative">
-                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-black/20 border border-white/5 mb-6 transition-all duration-300 group-hover:shadow-[0_0_20px_hsl(32_93%_48%/0.25)]">
-                          <item.icon className="w-5 h-5 text-accent" />
+                        <div className="relative">
+                          <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-black/20 border border-white/5 mb-6 transition-all duration-300 group-hover:shadow-[0_0_20px_hsl(32_93%_48%/0.25)]">
+                            <item.icon className="w-5 h-5 text-accent" />
+                          </div>
+                          <h4 className="font-heading text-xl font-bold text-white leading-tight mb-3">{item.name}</h4>
+                          <p className="text-sm text-body leading-relaxed">{item.desc}</p>
                         </div>
-                        <h4 className="font-heading text-xl font-bold text-white leading-tight mb-3">{item.name}</h4>
-                        <p className="text-sm text-body leading-relaxed">{item.desc}</p>
-                      </div>
-                    </motion.a>
+                      </Link>
+                    </motion.div>
                   ))}
                 </div>
               </div>

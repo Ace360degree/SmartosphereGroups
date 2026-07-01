@@ -11,6 +11,10 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import Network from "./pages/Network";
 import NotFound from "./pages/NotFound";
+import BillboardNetworkManagement from "./pages/case-studies/BillboardNetworkManagement";
+import BiomedicalMonitoring from "./pages/case-studies/BiomedicalMonitoring";
+import GoKartTrackControl from "./pages/case-studies/GoKartTrackControl";
+import RadiationSafetyMonitoring from "./pages/case-studies/RadiationSafetyMonitoring";
 import { CustomCursor } from "./components/CustomCursor";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -32,6 +36,13 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsConditions />} />
           <Route path="/network" element={<Network />} />
+          
+          {/* Case Studies */}
+          <Route path="/case-studies/billboard-network" element={<BillboardNetworkManagement />} />
+          <Route path="/case-studies/biomedical-monitoring" element={<BiomedicalMonitoring />} />
+          <Route path="/case-studies/gokart-track" element={<GoKartTrackControl />} />
+          <Route path="/case-studies/radiation-safety" element={<RadiationSafetyMonitoring />} />
+
           {/* CATCH-ALL ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
